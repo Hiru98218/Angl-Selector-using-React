@@ -1,0 +1,134 @@
+/* Reset default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Main container styles */
+.App {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.App:hover {
+  transform: translateY(-10px);
+}
+
+/* Header styles */
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #4a4a72;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Input styles */
+input[type="number"] {
+  width: 80px;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="number"]:focus {
+  border-color: #ff9a9e;
+  box-shadow: 0 0 8px rgba(255, 154, 158, 0.6);
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-bottom: 20px;
+  appearance: none;
+  height: 10px;
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #4a4a72;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #4a4a72;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover,
+input[type="range"]::-moz-range-thumb:hover {
+  background-color: #6c6c93;
+  transform: scale(1.1);
+}
+
+/* Radio button styles */
+.radio-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #4a4a72;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + span {
+  color: #ff9a9e;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .radio-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
